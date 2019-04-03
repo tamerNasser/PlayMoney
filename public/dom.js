@@ -1,20 +1,29 @@
 //add current list of available currencies to drop-downs
 
 function buildList(data) {
-  let len = Object.keys(data).length;
-  let x = 0;
-
-  while (x < len) {
+  Object.keys(data).map(function(currency) {
     let newOption = document.createElement('option');
-
-    newOption.setAttribute('value', data[x]['id']);
-    newOption.textContent = data[x]['id'] + " " + data[x]['currencyName'];
+    newOption.setAttribute('value', currency);
+    newOption.textContent = currency + " " + currency.currencyName;
 
     document.getElementById('currencyFrom').appendChild(newOption);
     document.getElementById('currencyTo').appendChild(newOption);
+  })
 
-    len++;
-  }
+  // let len = Object.keys(data).length;
+  // let x = 0
+
+  // while (x < len) {
+  //   let newOption = document.createElement('option');
+  //
+  //   newOption.setAttribute('value', data['body]['results'][x]['id']);
+  //   newOption.textContent = data[x]['id'] + " " + data[x]['currencyName'];
+  //
+  //   document.getElementById('currencyFrom').appendChild(newOption);
+  //   document.getElementById('currencyTo').appendChild(newOption);
+  //
+  //   len++;
+  // }
 }
 
 function convertCurrency(cash, from, to){
