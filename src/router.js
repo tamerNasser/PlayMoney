@@ -10,7 +10,9 @@ const router = (req, res) => {
     handlers.handleCurrList(res);
   }else if(url.includes('.')){
     handlers.handlePublic(res,url);
-  } else {
+  } else if(url.includes('/convertor')){
+    handlers.handleRate(res,url);
+  }else {
     //TODO : 404 handler
   }
 };
