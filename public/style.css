@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.grid-element {
+  margin: 2%;
+  padding: 2%
+}
+
+header, textarea, input, footer {
+  grid-column: 1 / 4;
+}
+
+.currencyFrom {
+  grid-column: 1 / 2;
+}
+
+.convertImg {
+  grid-column: 2 / 3;
+}
+
+.currencyTo {
+  grid-column: 3 / 4;
+}
