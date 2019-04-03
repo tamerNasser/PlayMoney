@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const getcurrency = require('./currencyList')
+const request = require('request')
 
 const exType = {
   html: 'text/html',
@@ -27,11 +27,11 @@ const handlerHome = (res) => {
   })
 }
 const handlePublic = (response, url) => {
-  let filePath = path.join(__dirname, "..", url)
+  let filePath = path.join(__dirname, "..","public", url)
   const extension = url.split('.')[1]
   fs.readFile(filePath, (err, file) => {
     if (err) {
-      handleServer500(res, err)
+      handleServer500(response, err)
     } else {
       response.writeHead(200, {
         'content-type': exType[extension]
@@ -42,20 +42,29 @@ const handlePublic = (response, url) => {
 }
 
 const handleCurrList = (response) =>{
-  let currency = getcurrency.currencyList();
-  fs.readFile(currency, (err, file) => {
-    if (err) {
-      handleServer500(res,err);
-    } else {
-      res.writeHead(200, {
-        'content-type': 'application/json'
-      })
-      res.end(file)
+
+  request('https://free.currencyconverterapi.com/api/v6/currencies?apiKey=596d75a4b41be91979c1', (error, body) => {
+    if (error) {
+      handleServer500(response,"DATA NOT FOUND");
+    }
+    else {
+      response.writeHead(200,{'content-Type':'text/html'})
+      response.end(JSON.stringify(body))
     }
   })
+  // console.log(data);
+  //   if (!data) {
+  //
+  //   } else {
+  //     res.writeHead(200, {
+  //       'content-type': 'application/json'
+  //     })
+  //     res.end(data)
+  //   }
+
 }
 module.exports = {
   handlePublic,
   handlerHome,
-  handlerCurrList
+  handleCurrList
 }
