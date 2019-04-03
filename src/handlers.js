@@ -1,7 +1,11 @@
 const path = require('path');
 const fs = require('fs');
 const request = require('request')
-
+const urlHTTP = require('url')
+const querystring = require('querystring')
+const config = require('./config')
+const EX_API_KEY = config.APIKEY
+console.log(EX_API_KEY);
 const exType = {
   html: 'text/html',
   css: 'text/css',
@@ -11,7 +15,7 @@ const exType = {
 };
 
 const handleServer500 = (res, err) => {
-  res.writeHead(500, exType.html)
+  res.writeHead(500, {"content-Type":exType.html})
   res.end("<h1>Sorry, there was an error in the server.</h1><br/><h2>ERROR CODE: 500</h2><br/>Error details: <br/>" + err)
 }
 const handlerHome = (res) => {
@@ -52,19 +56,26 @@ const handleCurrList = (response) =>{
       response.end(JSON.stringify(body))
     }
   })
-  // console.log(data);
-  //   if (!data) {
-  //
-  //   } else {
-  //     res.writeHead(200, {
-  //       'content-type': 'application/json'
-  //     })
-  //     res.end(data)
-  //   }
-
 }
+
+const handleRate = (res,url)=>{
+  const query = querystring.parse(urlHTTP.parse(url).query)
+
+  request(`https://free.currencyconverterapi.com/api/v6/convert?q=${query.from}_${query.to}&compact=ultra&apiKey=${EX_API_KEY}`, (error, body) => {
+    if (error) {
+      handleServer500(res,"DATA NOT FOUND");
+    }
+    else {
+      res.writeHead(200,{'content-Type':'text/html'})
+      // console.log(Object.values(JSON.parse(body.body))[0]);
+      res.end((Object.values(JSON.parse(body.body))[0]).toString())
+    }
+  })
+}
+
 module.exports = {
   handlePublic,
   handlerHome,
-  handleCurrList
+  handleCurrList,
+  handleRate
 }
