@@ -6,13 +6,11 @@ const currencyList = () => {
       return new TypeError("Sorry, there was an error in the API call");
     }
     else {
-      console.log(body);
-      return body;
+      console.log("Data from request",body);
+      return body.toString();
     }
   })
 };
 
 
-module.exports = {
-  currencyList
-};
+module.exports = currencyList;
