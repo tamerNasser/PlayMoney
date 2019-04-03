@@ -1,6 +1,15 @@
-body {
-  text-align: center;
+html {
+
 }
+
+body {
+  font-family: 'Reem Kufi', sans-serif;
+  text-align: center;
+  background-image: url('https://user-images.githubusercontent.com/32282170/55518143-8b53c580-567b-11e9-9834-23960b8087f8.png';)
+  /* background-attachment: fixed;
+  background-position: center-bottom; */
+}
+
 
 .grid-container {
   display: grid;
@@ -28,7 +37,11 @@ header, textarea, input, footer {
   grid-column: 3 / 4;
 }
 
-#changebtn{
-
-
+footer {
+  position: fixed;
+  bottom: 0;
+  margin: 2%;
+  padding: 2%;
+  text-align: center;
+  width: 100%;
 }
