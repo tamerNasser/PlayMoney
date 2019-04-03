@@ -3,8 +3,8 @@ fetch('/currencyList')
     return response.json();
   })
   .then(function(data) {
-    console.log(data);
+    return data.body.results;
   })
   .catch(function(error) {
-    console.log(error);
+    return error;
   })
