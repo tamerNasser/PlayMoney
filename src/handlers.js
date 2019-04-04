@@ -11,7 +11,7 @@ const exType = {
   css: 'text/css',
   js: 'application/javascript',
   jpg: 'image/jpg',
-  gif: 'image/gif',
+  ico: 'image/x-ico',
 };
 
 const handleServer500 = (res, err) => {
