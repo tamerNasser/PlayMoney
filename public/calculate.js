@@ -2,7 +2,6 @@ const cashInput = document.getElementById('currencyInput').value;
 const fromButton = document.getElementById('currencyFrom').options[fromButton.selectedIndex].value;
 const toButton = document.getElementById('currencyTo').options[toButton.selectedIndex].value;
 
-
 fetch('/convertor?from=EUR&to=GBP')
   .then(function(response) {
     return response.json();
