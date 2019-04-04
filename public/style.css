@@ -1,12 +1,15 @@
-html {
-
+html {background: #eacda3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*from ui-gradients.com */
 }
 
 body {
   font-family: 'Reem Kufi', sans-serif;
   text-align: center;
-  background-image: url('https://user-images.githubusercontent.com/32282170/55518143-8b53c580-567b-11e9-9834-23960b8087f8.png';)
-  /* background-attachment: fixed;
+  background-image: url('https://user-images.githubusercontent.com/32282170/55518143-8b53c580-567b-11e9-9834-23960b8087f8.png';);
+/*
+  background-attachment: fixed;
   background-position: center-bottom; */
 }
 
@@ -40,8 +43,6 @@ header, textarea, input, footer {
 footer {
   position: fixed;
   bottom: 0;
-  margin: 2%;
-  padding: 2%;
   text-align: center;
   width: 100%;
 }

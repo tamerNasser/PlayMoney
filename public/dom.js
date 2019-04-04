@@ -20,15 +20,12 @@ function buildList(data) {
   })
 }
 
-// function convertCurrency(cash, from, to){
-// }
-
 //retrieve values from currencyFrom and currencyTo dropdowns when submit button is pressed
 const cashInput = document.getElementById('currencyInput');
 const fromButton = document.getElementById('currencyFrom');
 const toButton = document.getElementById('currencyTo');
 
-function sendd(){
+function calculate(){
 let fromCash = cashInput.value;
 let fromCurrency = fromButton.options[fromButton.selectedIndex].value;
 let toCurrency = toButton.options[toButton.selectedIndex].value;
