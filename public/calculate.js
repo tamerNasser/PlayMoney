@@ -1,6 +1,14 @@
-
 const resultsTxt = document.getElementById('results');
-
+fetch('/convertor?from=EUR&to=GBP')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    return(data);
+  })
+  .catch(function(error) {
+    return(error);
+  })
 
 function calculate(frombtn,tobtn,cashInput){
 function getRate(from,to,cb){
