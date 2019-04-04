@@ -47,7 +47,7 @@ const handlePublic = (response, url) => {
 
 const handleCurrList = (response) =>{
 
-  request('https://free.currencyconverterapi.com/api/v6/currencies?apiKey=596d75a4b41be91979c1', (error, body) => {
+  request(`https://free.currencyconverterapi.com/api/v6/currencies?apiKey=${config.APIKEY}`, (error, body) => {
     if (error) {
       handleServer500(response,"DATA NOT FOUND");
     }
