@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+
+  },
+  "devDependencies": {
     "nodemon": "^1.18.10",
     "request": "^2.88.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.10.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "node test.js",
     "connect": "nodemon src/server.js",
