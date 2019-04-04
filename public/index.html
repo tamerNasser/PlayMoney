@@ -32,15 +32,12 @@
   <select class="grid-element" id="currencyFrom" name="currencyFrom" >
 
   </select>
-<label for="changebtn">
-  <input class="grid-element convertImg" type="submit" name="submit" value="" id="changebtn">
-     <img src="" id="changebtn">
-  </label>
+  <input class="grid-element convertImg" type="submit" name="submit" value="Convert to" id="changebtn">
   <select class="grid-element" id="currencyTo" class="" name="currencyTo">
 
   </select>
 
-<textarea class="grid-element" name="name" rows="2" cols="40" placeholder="$$$$$$"></textarea>
+<textarea id="results" class="grid-element" name="name" rows="2" cols="40" placeholder="$$$$$$" readonly></textarea>
 
 <div class="grid-element mascot-container">
   <img id="mascot" src="https://user-images.githubusercontent.com/32282170/55518143-8b53c580-567b-11e9-9834-23960b8087f8.png" alt="">
@@ -51,12 +48,13 @@
 </div>
 <script type="text/javascript" src="./fetchCurrency.js">
 </script>
+<script type="text/javascript" src="./calculate.js"></script>
 <script type="text/javascript" src="./dom.js">
 </script>
 
-<script type="text/javascript" src="./calculate.js">
 
-</script>
+
+
 </body>
 
 </html>
