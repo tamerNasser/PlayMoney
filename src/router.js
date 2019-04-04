@@ -13,7 +13,7 @@ const router = (req, res) => {
   } else if(url.includes('/convertor')){
     handlers.handleRate(res,url);
   }else {
-    //TODO : 404 handler
+    handlers.handlerHome(res,url)
   }
 };
 
