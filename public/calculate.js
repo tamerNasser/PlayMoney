@@ -7,10 +7,10 @@ fetch('/convertor?from=EUR&to=GBP')
     return response.json();
   })
   .then(function(data) {
-    console.log(data);
+    return(data);
   })
   .catch(function(error) {
-    console.log(error);
+    return(error);
   })
 
   submitButton.addEventListener('submit', function(e) {
