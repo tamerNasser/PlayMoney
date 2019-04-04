@@ -11,12 +11,27 @@ body {
   text-align: center;
 }
 
+h1 {
+  font-size: 2.5em;
+}
+#currencyInput {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 1.5em;
+}
+
+#results {
+  font-family: 'Reem Kufi', sans-serif;
+  padding: 5%;
+  font-size: 1.8em
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 33% 33% 33%;
 }
 
 .grid-element {
+  text-align: center;
   margin: 2%;
   padding: 2%
 }
