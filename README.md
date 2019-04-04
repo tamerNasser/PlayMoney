@@ -2,7 +2,13 @@
 
 *مصرفجي PlayMoney* is a web app that provides up-to-date currency exchange calculation on over 150 currency pairs.
 
-![](<img src="https://user-images.githubusercontent.com/32282170/55547483-119ef480-56da-11e9-8a6a-46a0830a1ae3.png" alt="alt text" width="300px" height="auto">)
+
+---
+
+
+
+
+<img src="https://user-images.githubusercontent.com/32282170/55547483-119ef480-56da-11e9-8a6a-46a0830a1ae3.png" alt="alt text" width="300px" height="auto">
 
 The 2 API requests are made on the back-end using the Request module:
 
