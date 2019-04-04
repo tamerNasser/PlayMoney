@@ -17,46 +17,43 @@
 </head>
 
 <body>
-  <noscript>
-    Please enable JavaScript on your interwebs
-  </noscript>
-<div class="grid-container">
+  <noscript>Please enable JavaScript on your interwebs</noscript>
+<!-- CSS grid layout -->
+  <div class="grid-container">
 
-  <header class="grid-element">
-    <h1>مصرفجي PlayMoney</h1>
+    <header class="grid-element">
+      <h1>مصرفجي PlayMoney</h1>
+    </header>
 
-  </header>
+<!-- User Input -->
+    <input type="number" name="currency" class="grid-element" id="currencyInput" placeholder="Show Me The Money!">
 
-  <input type="number" name="currency" class="grid-element" id="currencyInput" placeholder="Show Me The Money!">
+<!-- Currency selectors with submit button in between -->
+    <select class="grid-element" id="currencyFrom" name="currencyFrom"></select>
 
-  <select class="grid-element" id="currencyFrom" name="currencyFrom" >
+    <label for="changebtn">
+      <input class="grid-element convertImg" type="submit" name="submit" value="" id="changebtn">
+      <img src="" id="changebtn">
+    </label>
 
-  </select>
-<label for="changebtn">
-  <input class="grid-element convertImg" type="submit" name="submit" value="" id="changebtn">
-     <img src="" id="changebtn">
-  </label>
-  <select class="grid-element" id="currencyTo" class="" name="currencyTo">
+    <select class="grid-element" id="currencyTo" class="" name="currencyTo"></select>
 
-  </select>
+<!-- Results field -->
+    <textarea class="grid-element" name="name" rows="2" cols="40" placeholder="$$$$$$"></textarea>
 
-<textarea class="grid-element" name="name" rows="2" cols="40" placeholder="$$$$$$"></textarea>
+<!-- Monkey mascot logo and footer below -->
+    <div class="grid-element mascot-container">
+      <img id="mascot" src="https://user-images.githubusercontent.com/32282170/55518143-8b53c580-567b-11e9-9834-23960b8087f8.png" alt="">
+    </div>
 
-<div class="grid-element mascot-container">
-  <img id="mascot" src="https://user-images.githubusercontent.com/32282170/55518143-8b53c580-567b-11e9-9834-23960b8087f8.png" alt="">
+    <footer>copyright 2019© TJ media. All rights reserved.</footer>
 
-</div>
+  </div>
 
-<footer>copyright 2019© TJ media.  All rights reserved.</footer>
-</div>
-<script type="text/javascript" src="./fetchCurrency.js">
-</script>
-<script type="text/javascript" src="./dom.js">
-</script>
+  <script type="text/javascript" src="./fetchCurrency.js"></script>
+  <script type="text/javascript" src="./dom.js"></script>
+  <script type="text/javascript" src="./calculate.js"></script>
 
-<script type="text/javascript" src="./calculate.js">
-
-</script>
 </body>
 
 </html>
