@@ -13,7 +13,7 @@ The 2 API requests are made on the back-end using the Request module:
 
 The calculation for the currency is achieved on the front-end using a fetch request to the server.
 
-Testing is in progress TBA (back-end of pure functions and CodeCov)
+Basic testing with Tape (back-end of pure functions and CodeCov TBA)
 
 Error-handling 404 500 TBA
 
