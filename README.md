@@ -1,10 +1,8 @@
 # مصرفجي PlayMoney
 
-[link to app here](heroku.com)
-
 *مصرفجي PlayMoney* is a web app that provides up-to-date currency exchange calculation on over 150 currency pairs.
 
-Screenshot TBA
+![](<img src="https://user-images.githubusercontent.com/32282170/55547483-119ef480-56da-11e9-8a6a-46a0830a1ae3.png" alt="alt text" width="300px" height="auto">)
 
 The 2 API requests are made on the back-end using the Request module:
 
@@ -13,10 +11,5 @@ The 2 API requests are made on the back-end using the Request module:
 
 The calculation for the currency is achieved on the front-end using a fetch request to the server.
 
-Basic testing with Tape (back-end of pure functions and CodeCov TBA)
-
-Error-handling 404 500 TBA
-
-Travis TBA
-
-Hosted on Heroku TBA
+## Stretch goals
+App was originally intended to serve as ATM finder with geolocation for Braille and disabled customers in remote areas.
